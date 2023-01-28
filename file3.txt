@@ -1,0 +1,240 @@
+Ansible is NO.1 Configuration management tool
+
+Ansible is NO.1 Configuration management tool
+
+Ansible is an Open source IT Automation tool. Mainly used to automate configuration management activities.
+
+If we want to install software/update patches in 1 machine then it is easy and may take 10 minutes to do this task. But think that, we need to do the same activity on 12 Machines, then it would take 2 hours of effort. If we automate the same task using ansible, we will save time and there is no scope of human error and our Infra configuration would be as code. We can modify and can reuse the same.
+
+Using Ansible, we can automate almost all the regular IT tatsks/process.
+
+Automate daily and repetitive tasks
+Application deployments
+Installation of softwares
+Patching of softwares
+Any configuration changes related to any Application or any softwares.
+To improve security and compliance
+Why Ansible is so popular?
+It is an Open source, i.e. free to use
+Easy to learn and automate.
+It is agent less. Hence no headache of maintaining agents.
+Easy to install, anyone can install and start working on ansible within short time compared to its competitors.
+It has great community support, after ansible was acquired by redhat.
+How to install Ansible on laptop?
+Steps for Mac
+Run below command to install it pip
+curl https://bootstrap.pypa.io/get-pip.py -o get-pip.py
+$ python get-pip.py --user
+Run below command to install Ansible
+$ python -m pip install --user ansible
+
+Or install Ansible using brew
+brew install ansible
+Steps for Linux
+Below is the command to run on RHEL
+sudo yum install ansible
+
+Below is the command to run on Ubuntu
+$ sudo apt update
+$ sudo apt install software-properties-common
+$ sudo add-apt-repository --yes --update ppa:ansible/ansible
+$ sudo apt install ansible
+Steps for Windows
+As of now, Ansible cannot work natively on a Windows host. So there is no direct way to install Ansible on Windows OS. However, there are different ways to use Ansible on Windows for practice purposes.
+
+Using Cygwin and then installing ansible
+Using a Linux Virtual Machine via Virtual Box and then installing ansible.
+What are all the basic commands of Ansible?
+ansible localhost -m ping
+This is to check if the Ansible installation is good.
+This runs single command
+It runs the ping command on the local host
+ansible-playbook playbooks/PLAYBOOK_NAME.yml
+The playbook is a list of plays, with each play performing multiple tasks.
+ansible-playbook playbooks/PLAYBOOK_NAME.yml –tags firsttask
+Used to run only specific tasks.
+In this command it runs all tagged function by firsttask name.
+ansible-playbook playbooks/PLAYBOOK_NAME.yml –skip-tags secondtask
+Used to skip specific tasks.
+This command skip all tagged tasks named secondtask.
+Reference urls of Ansible
+https://www.redhat.com/en/topics/automation/learning-ansible-tutorial
+
+https://www.ansible.com/overview/how-ansible-works
+
+https://docs.ansible.com/
+
+
+DevOps for beginners
+By Sangamesh Kotni - November 12, 2021 0
+Table of Contents
+What Is DevOps?
+Problems faced before DevOps
+After DevOps
+Why DevOps is so popular??
+Reference urls of DevOps
+What Is DevOps?
+The word “DevOps” is combination of Development + Operations , It is practice which helps both IT streams to work collaboratively rather than in silos.
+
+Before DevOps, We had below respective responsibilities of each teams.
+
+Development Team:- Use to build the take months together time to build application and once application is tested in their local environment, It used to handed over to operation team.
+
+Operations Team:- Used to do deployment into test preprod and prod environment and support the application as well as the servers which has hosted these applications.
+
+Problems faced before DevOps
+There was always an issue with owning responsibility for any bugs raised in higher environments. Development team used to say this issues is not development issue and works fine in my local environment.
+
+Operations Team is to complain, this issue wasn’t there in previous release. So debate used to happen for each release and direct impact is on the customers.
+
+After DevOps
+As part of DevOps culture, It bridges the gap between development and operations teams. This was missing before.
+
+It brought all the teams involved in building and maintaining of application as one team
+Rather than passing the ball/working in silos for any issue between these IT teams.
+Each member of team came forward with mindset of “how can we help to fix this issue?”
+This resulted in fixing issue in short period of time.
+We release small features and make it live very frequently rather than going big bang release.
+Automate as much as possible, so that there is no human errors and all the environments are identical.
+Why DevOps is so popular??
+Time to market is shortened.
+Wherever it is possible Automation of all the tasks.Which resulted in less human errors.
+Early detection of any issues in development cycle only.
+Code quality checks at development stages only fixed.
+DevOps creates efficiency.
+Improved communication between teams.
+DevOps establish a growth mindset. We will fail fast and incorporate learnings into their processes
+Continually improving, increasing customer satisfaction
+Accelerating innovation and market adaptability.
+Reference urls of DevOps
+https://azure.microsoft.com/en-gb/overview/what-is-devops/
+
+https://aws.amazon.com/devops/what-is-devops/
+
+https://cloud.google.com/devops
+
+Introduction to Terraform
+By Sangamesh Kotni - November 7, 2021 0
+Table of Contents
+What Is Terraform?
+Why Terraform is so Popular?
+How to install Terraform on laptop?
+Steps to install on Mac/Linux
+Steps to install on Windows
+What are all the basic commands of Terraform?
+Reference urls of Terraform
+What Is Terraform?
+Terraform is an open source infrastructure as code tool. HashiCarp has developed it.
+
+Terraform is used by almost all experts/engineers to create any cloud infrastructure. Terraform is go to tool for all the Cloud Engineers.
+
+Below are the key benefits of terraform 
+
+We can codify our application infrastructure
+An infrastructure that can be easily reproduced using terraform.
+We can version control infrastructure, it can be kept securely and safely.
+Why Terraform is so Popular?
+Currently terraform is go to tool for any infrastructure provisioning tasks.
+
+Below are the main reasons
+
+Free to use.
+Terraform is declarative language.
+Learning curve is very short.
+Once you learn terraform, it is easy to provision infrastructure in other cloud providers with minimal effort.
+Syntax is same for other providers.
+We can create Immutable infrastructure.
+Once you don’t need infrastructure, we can destroy infrastructure. Which will save the cost for IT resources.
+Terraform is master and agent less compared to other tools. Which saves costs.
+How to install Terraform on laptop?
+In order to install terraform please download appropriate package for your system as zip.
+
+Steps to install on Mac/Linux
+Unzip terraform
+In order to move the terraform binary use command “mv terraform /usr/local/bin/”
+In order to verify installation, run command “terraform -help”
+Steps to install on Windows
+Run terraform.exe to install terraform.
+Go to Control Panel -> System -> System settings -> Environment Variables.
+Scroll down in system variables until you find PATH.
+Click edit and change accordingly.
+BE SURE to include a semicolon at the end of the previous as that is the delimiter, i.e. c:\path;c:\terraform
+Launch a new console for the settings to take effect.
+In order to verify installation, run command “terraform -help”
+What are all the basic commands of Terraform?
+Below are main commands used in terraform
+
+terraform init
+This is the first command we run in terraform.
+Command is used to initialise directory containing Terraform configuration files.
+Command will automatically find, download, and install the necessary provider plugins mentioned in the configurations.
+terraform fmt 
+Command is used to rewrite Terraform configuration files to a canonical format and style.
+It does linting
+It makes code more readable format
+terraform plan
+Command creates an execution plan.
+Checks the current status with the existing backend / local state file.
+Indicates any differences between the current infrastructure and the current code.
+This is just a dry run, it doesn’t actually create any resources.
+terraform apply
+This command actually creates all the resources referenced in the Terraform configuration files.
+Depending on the number of resources, it will take time to create those resources.
+terraform destroy
+Command is a convenient way to destroy all resources managed by the Terraform configuration.
+This process is irreversible. Once the command is run, Terraform starts to destroy all resources.
+Reference urls of Terraform
+https://www.terraform.io/intro/index.html
+
+https://learn.hashicorp.com/terraform?utm_source=terraform_io
+
+
+Main Cloud Service Provider as of 2021
+By Sangamesh Kotni - October 29, 2021 5401
+Postion	CSP	GA for public	Logo
+1	AWS (Amazon Web Services)	14th-Mar-2006	
+2	Microsoft Azure	27th-Oct-2008	
+3	GCP (Google Cloud Platform)	07th-Apr-2008	
+4	OCI (Oracle Cloud Infrastructure)	20th-Oct-2016	
+
+Before Cloud Computing era
+By Roopashree - October 29, 2021 7794
+Before, cloud computing companies used to have their own data centres. Companies used to have mainly two types of expenditure on servers, Capex & Opex.
+
+CapeX(Capital Expenditure) 
+In order to purchase the servers, it was quite expensive. Even renting wasn’t an option either, As it was also quite expensive.
+Once a purchase order is placed for the servers, it takes a couple of months of lead time to get the servers into companies data centres.
+It was required to maintain specific temperature for these servers and hence we used to place these servers in a separate room or a building with controlled temperature.
+ OpeX(Operational Expenditure)
+  In order to maintain these  servers,  we would require 24/7 power supply and air conditioning.
+  Separate admin team was required to setup, configure and maintain these  servers.
+  In case of any issues with the servers there was an outage/downtime on application. If application is down then business is down and hence loss to companies business.
+
+  What is Cloud Computing ?
+  By Roopashree - October 24, 2021 6213
+  Cloud computing doesn’t mean computers are in the cloud. It is actually on a safe, secure location. We call it a data centre.
+
+   Cloud Computing, Is On Demand delivery of IT resources. We just need a laptop/Desktop and internet connection to access it.
+
+    Pay-as-you-go pricing, We pay for what we use. If you don’t want to use Cloud IT resources before 8 a.m. or after 5 p.m. or during the weekend then delete resources whenever after using IT resources. 
+
+    Whenever IT resources are required, Just create it via automation.There is no capex or opex cost involved here. No need to buy or maintain the servers.
+
+
+    EDITOR PICKS
+    Archives
+    November 2021
+    October 2021
+    Categories
+    cloud
+    POPULAR POSTS
+
+    Before Cloud Computing era
+    October 29, 2021
+
+    What is Cloud Computing ?
+    October 24, 2021
+
+    Main Cloud Service Provider as of 2021
+    October 29, 2021
+
